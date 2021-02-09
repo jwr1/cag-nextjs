@@ -1,0 +1,97 @@
+.sermonVideoWrapper {
+  position: relative;
+}
+
+.sermonVideoForeground {
+  display: inline-block;
+  /* Center Video element */
+  width: 100%;
+  margin: 0;
+  padding: 50px 0;
+
+  h1 {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans';
+    color: var(--sermon-primary-color);
+    text-shadow: 0 0 20px black;
+  }
+
+  h2 {
+    margin-top: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.seriesLogo {
+  position: relative;
+  width: 80%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.sermonVideoForegroundResizeWrapper {
+  position: relative;
+  padding-bottom: 440px;
+  /* 16:9 */
+  height: 0;
+
+  iframe {
+    width: 800px;
+    height: 440px;
+  }
+}
+
+/* .videoWrapper iframe {
+  width: 800px;
+  height: 440px;
+} */
+
+/* .sectionFixedHeight {
+  height: 900px;
+} */
+
+// .seriesLogo,
+// .seriesText {
+//   opacity: 0;
+// }
+
+.homeDivide {
+  display: inline-block;
+  padding: 40px 0;
+
+  h3 {
+    font-size: 40px;
+    font-family: 'IBM Plex Sans';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--theme-text-color);
+  }
+}
+
+/* TODO: Remove when done */
+
+/* COVID CODE */
+
+.ministryOnlineDiv a {
+  width: 90%;
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 800px) {
+  #announcement-div h3 {
+    font-size: 20px;
+  }
+
+  /* TODO: Remove when done */
+  /* COVID CODE */
+  .ministryOnlineDiv {
+    a {
+      width: 70%;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+}

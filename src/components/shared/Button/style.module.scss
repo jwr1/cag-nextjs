@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--theme-text-color);
+  padding: 10px 30px;
+
+  text-transform: uppercase;
+
+  border: 2px solid var(--theme-text-color);
+
+  &:hover {
+    color: var(--theme-text-hover);
+    border-color: var(--theme-text-hover);
+  }
+}
+
+.buttonWhite {
+  color: var(--theme-primary-color);
+  border-color: var(--theme-primary-color);
+}
+
+.buttonSmall {
+  font-size: 14px;
+  padding: 5px 10px;
+}
