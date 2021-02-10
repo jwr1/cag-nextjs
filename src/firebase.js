@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import 'firebase/analytics';
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
@@ -12,7 +11,6 @@ if (!firebase.apps.length) {
     appId: '1:829120399131:web:18b9a49749dce3fb4075be',
     measurementId: 'G-4D03VMZV9Q',
   });
-  firebase.analytics();
 } else {
   firebase.app(); // if already initialized, use this one
 }

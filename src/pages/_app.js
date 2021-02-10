@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
-import '../firebase.js';
+import firebaseAnalytics from '../firebase-analytics.js';
 
 import '../styles/global.scss';
 
@@ -20,6 +20,8 @@ function MyApp({ Component, pageProps }) {
     gtag('js', new Date());
 
     gtag('config', 'UA-138079008-1');
+
+    firebaseAnalytics();
   }, []);
 
   return (
