@@ -1,0 +1,162 @@
+@keyframes social-in {
+  0% {
+    transform: scale(0.5);
+  }
+  40% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes social-out {
+  0% {
+    transform: scale(0.8);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  70% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+.ministriesSection {
+  grid-area: right;
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  padding: 40px 0px;
+  background-color: var(--theme-background-color);
+  color: var(--theme-primary-color);
+  text-align: center;
+
+  img {
+    height: 20px;
+  }
+
+  h1 {
+    color: var(--theme-secondary-color);
+    font-size: 13px;
+    padding: 0px;
+    margin-bottom: 3px;
+  }
+
+  li {
+    margin: 0px;
+    text-align: left;
+    font-size: 13px;
+    vertical-align: top;
+
+    a {
+      color: #576371;
+      text-decoration: none;
+    }
+  }
+}
+
+.footerInner {
+  width: var(--global-content-width);
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.footerSocialIcons {
+  img {
+    height: 100%;
+  }
+
+  a {
+    display: inline-block;
+    height: 80px;
+    padding: 0px;
+    /* background: green; */
+    transform: scale(0.5);
+
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+
+    &:hover {
+      animation-name: social-in;
+    }
+
+    &:not(:hover) {
+      animation-name: social-out;
+    }
+  }
+}
+
+.footerInformation {
+  color: var(--theme-secondary-color);
+}
+
+.footerInformationPhone {
+  font-size: 20px;
+}
+
+.footerInformationAddress {
+  color: #8392a3;
+}
+
+.footerLinkContainer {
+  display: grid;
+  grid-template-areas:
+    'auto auto auto right'
+    'auto auto auto right'
+    'auto auto auto right';
+  text-align: left;
+  border-top: 1px solid #cbd0d6;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.footerLinkSection {
+  margin: 10px 30px;
+}
+
+@media only screen and (max-width: 800px) {
+  .footerLinkContainer {
+    display: none;
+    text-align: center;
+  }
+
+  .footer {
+    h1 {
+      font-size: 20px;
+    }
+
+    li {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    img {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+
+  .footerInner {
+    display: inline-block;
+    padding: 0px;
+    width: 90%;
+    margin: 0;
+  }
+
+  .footerLinkSection {
+    margin-top: 20px;
+  }
+
+  .footerSocialIcons a {
+    padding: 10px 5px;
+  }
+}

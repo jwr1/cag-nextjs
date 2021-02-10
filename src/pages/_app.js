@@ -1,29 +1,25 @@
-import { useEffect } from "react";
-import Head from "next/head";
+import { useEffect } from 'react';
+import Head from 'next/head';
 
-import firebase from "firebase/app";
-import "firebase/analytics";
+import '../firebase.js';
 
-import firebaseConfig from "../firebaseConfig.json";
-import "../styles/global.scss";
+import '../styles/global.scss';
 
-import ContextsProvider from "../contexts";
-import Header from "../components/Header";
+import ContextsProvider from '../contexts';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   // Global site tag (gtag.js) - Google Analytics
   useEffect(() => {
-    console.log("hello");
+    console.log('hello');
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag("js", new Date());
+    gtag('js', new Date());
 
-    gtag("config", "UA-138079008-1");
-
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    gtag('config', 'UA-138079008-1');
   }, []);
 
   return (
@@ -74,7 +70,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
-      {/* <Footer></Footer> */}
+      <Footer />
     </ContextsProvider>
   );
 }

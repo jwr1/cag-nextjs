@@ -1,5 +1,7 @@
 .sermonVideoWrapper {
-  position: relative;
+  background-image: url('/static/sermon_series/background_20123101.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .sermonVideoForeground {
@@ -80,18 +82,33 @@
 }
 
 @media only screen and (max-width: 800px) {
-  #announcement-div h3 {
-    font-size: 20px;
+  .sermonVideoForegroundResizeWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 2.5%;
+      width: 95%;
+      height: 95%;
+    }
   }
 
   /* TODO: Remove when done */
   /* COVID CODE */
+  .homeDivide h3 {
+    font-size: 20px;
+  }
+
   .ministryOnlineDiv {
     a {
       width: 70%;
     }
     h3 {
-      font-size: 1.5em;
+      font-size: 24px;
     }
   }
 }

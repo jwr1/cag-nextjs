@@ -1,8 +1,7 @@
-import Image from 'next/image';
-
 import style from './style.module.scss';
 import CenterText from '../../shared/CenterText';
 import Button from '../../shared/Button';
+import FunFact from '../FunFact';
 
 export default function SeriesSection() {
   return (
@@ -31,7 +30,7 @@ export default function SeriesSection() {
             <Button href="/ministries/doulos/">Young Adults</Button>
             <br />
             <br />
-            <Button href="/ministries/adults/">Adults</Button>
+            <Button href="/ministries/adults/">Adult Classes</Button>
             <br />
             <br />
             <Button href="/ministries/community/">Get Connected</Button>
@@ -41,20 +40,10 @@ export default function SeriesSection() {
           </div>
           <br />
           <div className={style.homeDivide}>
-            <h3>
-              Local Church &bull; Global Outreach <br />
-              <span style={{ color: 'rgb(112, 132, 153)' }}>
-                Over 70 nations Represented
-              </span>
-            </h3>
+            <FunFact />
           </div>
           {/* Sermon video Section */}
           <div className={style.sermonVideoWrapper}>
-            <Image
-              src="/static/sermon_series/background_20123101.jpg"
-              layout="fill"
-              objectFit="cover"
-            />
             <div className={style.sermonVideoForeground}>
               {/* LOGO Code */}
               <img

@@ -3,8 +3,7 @@ import classNames from 'classnames';
 import useEventListener from '@use-it/event-listener';
 import Link from 'next/link';
 
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from '../../../firebase';
 
 import style from './style.module.scss';
 
