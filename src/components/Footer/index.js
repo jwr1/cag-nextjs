@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import style from './style.module.scss';
 
@@ -12,18 +11,18 @@ export default function Footer() {
         <br />
         <div className={style.footerSocialIcons}>
           <Link href="https://www.facebook.com/cag.bowie/">
-            <a target="_blank">
-              <img src="/static/icons/social/FB.png" />
+            <a target="_blank" rel="noopener">
+              <img src="/static/icons/social/FB.png" alt="Facebook icon" />
             </a>
           </Link>
           <Link href="https://www.instagram.com/cag.bowie/">
-            <a target="_blank">
-              <img src="/static/icons/social/IG.png" />
+            <a target="_blank" rel="noopener">
+              <img src="/static/icons/social/IG.png" alt="Instagram icon" />
             </a>
           </Link>
           <Link href="https://www.youtube.com/channel/UCx-bgFNkwgq1c_42gy-BNrw">
-            <a target="_blank">
-              <img src="/static/icons/social/youtube.png" />
+            <a target="_blank" rel="noopener">
+              <img src="/static/icons/social/youtube.png" alt="YouTube icon" />
             </a>
           </Link>
         </div>
@@ -54,12 +53,16 @@ export default function Footer() {
             <ul>
               <li>
                 <Link href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV">
-                  <a target="_blank">Sermons</a>
+                  <a target="_blank" rel="noopener">
+                    Sermons
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="https://www.youtube.com/channel/UCx-bgFNkwgq1c_42gy-BNrw">
-                  <a target="_blank">Youtube</a>
+                  <a target="_blank" rel="noopener">
+                    Youtube
+                  </a>
                 </Link>
               </li>
             </ul>
@@ -157,7 +160,9 @@ export default function Footer() {
             <ul>
               <li>
                 <Link href="https://easytithe.com/caggiving">
-                  <a target="_blank">Online</a>
+                  <a target="_blank" rel="noopener">
+                    Online
+                  </a>
                 </Link>
               </li>
               <li>

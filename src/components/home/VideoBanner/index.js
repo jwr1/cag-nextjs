@@ -14,7 +14,7 @@ export default function VideoBanner() {
         loop
         muted
       >
-        <source src="/static/home/home_loop-20031001.mp4" />
+        <source src="/static/home/home_loop-20031001-optimized.mp4" />
       </video>
       <div>
         <div className={style.videoBannerText}>

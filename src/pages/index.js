@@ -37,7 +37,7 @@ export default function Home() {
   }, []);
 
   // calculate and set theme on scroll event
-  useEventListener('scroll', calcTheme);
+  useEventListener('scroll', calcTheme, { passive: true });
 
   return (
     <>

@@ -1,18 +1,18 @@
-import { useContext, useState, useRef } from "react";
-import classNames from "classnames";
-import Link from "next/link";
-import Image from "next/image";
+import { useContext, useState, useRef } from 'react';
+import classNames from 'classnames';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import headerThemeContext from "../../contexts/headerTheme";
-import style from "./style.module.scss";
+import headerThemeContext from '../../contexts/headerTheme';
+import style from './style.module.scss';
 
-import SearchResults from "./SearchResults";
+import SearchResults from './SearchResults';
 
 export default function Header() {
   const [headerTheme] = useContext(headerThemeContext);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
 
   const searchInputRef = useRef();
 
@@ -41,16 +41,16 @@ export default function Header() {
       </li>
       <li>
         <Link href="https://store.cag.org/">
-          <a target="_blank">
+          <a target="_blank" rel="noopener">
             STORE
             <span className={style.externalLink}>
               <Image
                 width="10px"
                 height="10px"
                 src={
-                  headerTheme === "light"
-                    ? "/static/icons/external_link_dark.png"
-                    : "/static/icons/external_link_light.png"
+                  headerTheme === 'light'
+                    ? '/static/icons/external_link_dark.png'
+                    : '/static/icons/external_link_light.png'
                 }
               />
             </span>
@@ -65,7 +65,7 @@ export default function Header() {
 
   let finalHeaderTheme;
   switch (headerTheme) {
-    case "transparent": {
+    case 'transparent': {
       if (mobileOpen) {
         finalHeaderTheme = style.headerDark;
       } else {
@@ -73,11 +73,11 @@ export default function Header() {
       }
       break;
     }
-    case "dark": {
+    case 'dark': {
       finalHeaderTheme = style.headerDark;
       break;
     }
-    case "light":
+    case 'light':
     default: {
       finalHeaderTheme = style.headerLight;
       break;
@@ -92,9 +92,9 @@ export default function Header() {
             <span className={style.headerIconInner}>
               <Image
                 src={
-                  headerTheme === "light"
-                    ? "/static/icons/cag-logo-left.png"
-                    : "/static/icons/cag-logo-white.png"
+                  headerTheme === 'light'
+                    ? '/static/icons/cag-logo-left.png'
+                    : '/static/icons/cag-logo-white.png'
                 }
                 alt="Home Page"
                 width="180.5px"
@@ -111,15 +111,15 @@ export default function Header() {
             type="text"
             placeholder="Search"
             value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
+            onChange={e => setSearchValue(e.target.value)}
             ref={searchInputRef}
           />
           <span className={style.searchButton}>
             <Image
               src={
-                headerTheme === "light"
-                  ? "/static/icons/search-dark.png"
-                  : "/static/icons/search-white.png"
+                headerTheme === 'light'
+                  ? '/static/icons/search-dark.png'
+                  : '/static/icons/search-white.png'
               }
               alt="Search CAG.org"
               width="20px"

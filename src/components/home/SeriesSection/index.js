@@ -36,7 +36,7 @@ export default function SeriesSection() {
             <Button href="/ministries/community/">Get Connected</Button>
             <br />
             <br />
-            {/* <Button href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHY9QrJzPXe2iA17zuX8Qtn" target="_blank">Conversations with Pastor Mark</Button><br/><br/> */}
+            {/* <Button href="https://www.youtube.com/playlist?list=PL-l7Wgw0EmCHY9QrJzPXe2iA17zuX8Qtn" target="_blank" rel="noopener">Conversations with Pastor Mark</Button><br/><br/> */}
           </div>
           <br />
           <div className={style.homeDivide}>
@@ -58,7 +58,7 @@ export default function SeriesSection() {
               <div className={style.sermonVideoForegroundResizeWrapper}>
                 <iframe
                   className="drop-shadow"
-                  id="series-video"
+                  title="Series Video"
                   src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
                   frameBorder="0"
                   allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
