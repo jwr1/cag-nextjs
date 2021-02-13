@@ -34,7 +34,7 @@ export default function VideoBanner() {
             View Sermons
           </Button>
         </div>
-        <DownButton className={style.bannerDownButton} href="#series-section" />
+        <DownButton href="#series-section" alt="Scroll to series section" />
       </div>
 
       {/* NOTIFICATION CODE */}

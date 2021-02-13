@@ -21,9 +21,10 @@ export default function YouTubeEmbed({ className, id, isPlaylist, title }) {
           {...{ title }}
         ></iframe>
       ) : (
-        <div
+        <button
           onClick={() => setIframeLoaded(true)}
           className={style.YouTubeEmbedImg}
+          aria-label={title}
         >
           <div
             style={
@@ -35,7 +36,7 @@ export default function YouTubeEmbed({ className, id, isPlaylist, title }) {
             }
           />
           <PlayIcon />
-        </div>
+        </button>
       )}
     </div>
   );

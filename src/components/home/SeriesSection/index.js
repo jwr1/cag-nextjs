@@ -13,7 +13,7 @@ export default function SeriesSection() {
             <h3>
               Ministries Online
               <br />
-              <span style={{ color: 'rgb(112, 132, 153)', fontSize: '.7em' }}>
+              <span style={{ color: 'rgb(94 110 128)', fontSize: '.7em' }}>
                 Ministries you can join from your home
               </span>
             </h3>
@@ -49,6 +49,7 @@ export default function SeriesSection() {
               {/* LOGO Code */}
               <img
                 src="/static/sermon_series/logo_20123101.png"
+                alt="Break Through series logo"
                 className={style.seriesLogo}
               />
 

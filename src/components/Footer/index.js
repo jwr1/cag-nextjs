@@ -1,28 +1,31 @@
-import classNames from "classnames";
-import Link from "next/link";
+import classNames from 'classnames';
+import Link from 'next/link';
 
-import style from "./style.module.scss";
+import style from './style.module.scss';
 
 export default function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.footerInner}>
-        <img src="/static/icons/cag-logo-center.png" />
+        <img
+          src="/static/icons/cag-logo-center.png"
+          alt="Cornerstone Church Logo"
+        />
         <br />
         <div className={style.footerSocialIcons}>
           <Link href="https://www.facebook.com/cag.bowie/">
             <a target="_blank" rel="noopener">
-              <img src="/static/icons/social/FB.png" alt="Facebook icon" />
+              <img src="/static/icons/social/FB.png" alt="Facebook Icon" />
             </a>
           </Link>
           <Link href="https://www.instagram.com/cag.bowie/">
             <a target="_blank" rel="noopener">
-              <img src="/static/icons/social/IG.png" alt="Instagram icon" />
+              <img src="/static/icons/social/IG.png" alt="Instagram Icon" />
             </a>
           </Link>
           <Link href="https://www.youtube.com/channel/UCx-bgFNkwgq1c_42gy-BNrw">
             <a target="_blank" rel="noopener">
-              <img src="/static/icons/social/youtube.png" alt="YouTube icon" />
+              <img src="/static/icons/social/youtube.png" alt="YouTube Icon" />
             </a>
           </Link>
         </div>

@@ -1,41 +1,40 @@
-import { useEffect } from "react";
-import Head from "next/head";
+import { useEffect } from 'react';
+import Head from 'next/head';
 
-import firebaseAnalytics from "../firebase-analytics.js";
+import firebaseAnalytics from '../firebase-analytics.js';
 
 // import fonts
-import "@fontsource/noto-sans-tc/latin.css";
-import "@fontsource/ibm-plex-mono/latin-400.css";
-import "@fontsource/ibm-plex-mono/latin-400-italic.css";
-import "@fontsource/ibm-plex-sans-condensed/latin-400.css";
-import "@fontsource/ibm-plex-sans-condensed/latin-400-italic.css";
-import "@fontsource/ibm-plex-sans/latin-100.css";
-import "@fontsource/ibm-plex-sans/latin-100-italic.css";
-import "@fontsource/ibm-plex-sans/latin-400.css";
-import "@fontsource/ibm-plex-sans/latin-400-italic.css";
-import "@fontsource/ibm-plex-sans/latin-700.css";
-import "@fontsource/ibm-plex-sans/latin-700-italic.css";
-import "@fontsource/ibm-plex-serif/latin-400.css";
-import "@fontsource/ibm-plex-serif/latin-400-italic.css";
-import "@fontsource/source-sans-pro/latin-400.css";
-import "@fontsource/source-sans-pro/latin-700.css";
-import "../styles/global.scss";
+import '@fontsource/noto-sans-tc/latin.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource/ibm-plex-mono/latin-400-italic.css';
+import '@fontsource/ibm-plex-sans-condensed/latin-400.css';
+import '@fontsource/ibm-plex-sans-condensed/latin-400-italic.css';
+import '@fontsource/ibm-plex-sans/latin-100.css';
+import '@fontsource/ibm-plex-sans/latin-100-italic.css';
+import '@fontsource/ibm-plex-sans/latin-400.css';
+import '@fontsource/ibm-plex-sans/latin-400-italic.css';
+import '@fontsource/ibm-plex-sans/latin-700.css';
+import '@fontsource/ibm-plex-sans/latin-700-italic.css';
+import '@fontsource/ibm-plex-serif/latin-400.css';
+import '@fontsource/ibm-plex-serif/latin-400-italic.css';
+import '@fontsource/source-sans-pro/latin-400.css';
+import '@fontsource/source-sans-pro/latin-700.css';
+import '../styles/global.scss';
 
-import ContextsProvider from "../contexts";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import ContextsProvider from '../contexts';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   // Global site tag (gtag.js) - Google Analytics
   useEffect(() => {
-    console.log("hello");
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag("js", new Date());
+    gtag('js', new Date());
 
-    gtag("config", "UA-138079008-1");
+    gtag('config', 'UA-138079008-1');
 
     firebaseAnalytics();
   }, []);

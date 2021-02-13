@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import firebase from 'firebase';
+import firebase from '../../../firebase';
 
 export default function FunFact() {
   const [funFact, setFunFact] = useState('Over 70 nations Represented');
@@ -19,7 +19,7 @@ export default function FunFact() {
   return (
     <h3>
       Local Church &bull; Global Outreach <br />
-      <span style={{ color: 'rgb(112, 132, 153)' }}>{funFact}</span>
+      <span style={{ color: 'rgb(94 110 128)' }}>{funFact}</span>
     </h3>
   );
 }
