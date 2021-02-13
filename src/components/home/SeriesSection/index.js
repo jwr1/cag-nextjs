@@ -1,5 +1,6 @@
 import style from './style.module.scss';
 import CenterText from '../../shared/CenterText';
+import YouTubeEmbed from '../../shared/YouTubeEmbed';
 import Button from '../../shared/Button';
 import FunFact from '../FunFact';
 
@@ -56,14 +57,12 @@ export default function SeriesSection() {
               {/* Sub Text code */}
               <h1 className={style.seriesText}></h1>
               <div className={style.sermonVideoForegroundResizeWrapper}>
-                <iframe
-                  className="drop-shadow"
+                <YouTubeEmbed
                   title="Series Video"
-                  src="https://www.youtube.com/embed?listType=playlist&list=PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
-                  frameBorder="0"
-                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                  id="PL-l7Wgw0EmCHjBzGbH_f-BxyqWIm4DCjV"
+                  className={style.sermonVideoEmbed}
+                  isPlaylist
+                />
               </div>
               <br />
               <br />

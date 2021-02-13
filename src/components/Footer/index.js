@@ -1,7 +1,7 @@
-import classNames from 'classnames';
-import Link from 'next/link';
+import classNames from "classnames";
+import Link from "next/link";
 
-import style from './style.module.scss';
+import style from "./style.module.scss";
 
 export default function Footer() {
   return (

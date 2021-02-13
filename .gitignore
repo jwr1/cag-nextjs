@@ -1,5 +1,6 @@
 *.DS_Store
 ref/pages/about_page/.DS_Store
+old
 
 node_modules
 
