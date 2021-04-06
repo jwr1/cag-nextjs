@@ -7,18 +7,43 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fontsource/ibm-plex-mono": "^4.2.1",
-    "@fontsource/ibm-plex-sans": "^4.2.1",
-    "@fontsource/ibm-plex-sans-condensed": "^4.2.1",
-    "@fontsource/ibm-plex-serif": "^4.2.1",
-    "@fontsource/noto-sans-tc": "^4.2.1",
-    "@fontsource/source-sans-pro": "^4.2.1",
+    "@fontsource/ibm-plex-mono": "^4.2.2",
+    "@fontsource/ibm-plex-sans": "^4.2.2",
+    "@fontsource/ibm-plex-sans-condensed": "^4.2.2",
+    "@fontsource/ibm-plex-serif": "^4.2.2",
+    "@fontsource/noto-sans-tc": "^4.2.2",
+    "@fontsource/source-sans-pro": "^4.2.2",
     "@use-it/event-listener": "^0.1.6",
-    "classnames": "^2.2.6",
-    "firebase": "^8.2.7",
-    "next": "10.0.6",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "sass": "^1.32.7"
-  }
+    "clsx": "^1.1.1",
+    "firebase": "^8.3.2",
+    "next": "10.1.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "@airbnb-config/eslint-react": "^1.0.0",
+    "@airbnb-config/prettier": "^1.0.2"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/@airbnb-config/eslint-react",
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/jsx-filename-extension": "off",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "prettier": "@airbnb-config/prettier"
 }

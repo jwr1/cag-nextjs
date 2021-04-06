@@ -48,7 +48,7 @@ export default function SeriesSection() {
             <div className={style.sermonVideoForeground}>
               {/* LOGO Code */}
               <img
-                src="/static/sermon_series/logo_20123101.png"
+                src="/static/sermon_series/foreground_21031601.png"
                 alt="Break Through series logo"
                 className={style.seriesLogo}
               />
@@ -56,7 +56,7 @@ export default function SeriesSection() {
               <br />
               <br />
               {/* Sub Text code */}
-              <h1 className={style.seriesText}></h1>
+              {/* <h1 className={style.seriesText}></h1> */}
               <div className={style.sermonVideoForegroundResizeWrapper}>
                 <YouTubeEmbed
                   title="Series Video"
@@ -67,8 +67,8 @@ export default function SeriesSection() {
               </div>
               <br />
               <br />
-              {/* <a className="button--white" href="/seriesmatterial/">Daily Videos</a> */}
-              <Button white href="/seriesmatterial/notes/">
+              {/* <a className="button--white" href="/seriesmaterial/">Daily Videos</a> */}
+              <Button white href="/seriesmaterial/notes/">
                 Sermon Notes
               </Button>
             </div>

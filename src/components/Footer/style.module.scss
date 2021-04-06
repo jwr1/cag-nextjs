@@ -40,8 +40,9 @@
   color: var(--theme-primary-color);
   text-align: center;
 
-  img {
+  svg {
     height: 20px;
+    fill: var(--theme-secondary-color);
   }
 
   h1 {
@@ -71,7 +72,7 @@
 }
 
 .footerSocialIcons {
-  img {
+  svg {
     height: 100%;
   }
 
@@ -139,7 +140,7 @@
       font-size: 20px;
     }
 
-    img {
+    svg {
       padding: 0px;
       margin: 0px;
     }

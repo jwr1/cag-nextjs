@@ -1,5 +1,6 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Link from 'next/link';
+import { CagLogoIcon, FacebookIcon, InstagramIcon, YouTubeIcon } from '../icons';
 
 import style from './style.module.scss';
 
@@ -7,25 +8,22 @@ export default function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.footerInner}>
-        <img
-          src="/static/icons/cag-logo-center.png"
-          alt="Cornerstone Church Logo"
-        />
+        <CagLogoIcon alt="Cornerstone Logo" />
         <br />
         <div className={style.footerSocialIcons}>
           <Link href="https://www.facebook.com/cag.bowie/">
             <a target="_blank" rel="noopener">
-              <img src="/static/icons/social/FB.png" alt="Facebook Icon" />
+              <FacebookIcon alt="Facebook Link" />
             </a>
           </Link>
           <Link href="https://www.instagram.com/cag.bowie/">
             <a target="_blank" rel="noopener">
-              <img src="/static/icons/social/IG.png" alt="Instagram Icon" />
+              <InstagramIcon alt="Instagram Link" />
             </a>
           </Link>
           <Link href="https://www.youtube.com/channel/UCx-bgFNkwgq1c_42gy-BNrw">
             <a target="_blank" rel="noopener">
-              <img src="/static/icons/social/youtube.png" alt="YouTube Icon" />
+              <YouTubeIcon alt="YouTube Link" />
             </a>
           </Link>
         </div>
@@ -64,7 +62,7 @@ export default function Footer() {
               <li>
                 <Link href="https://www.youtube.com/channel/UCx-bgFNkwgq1c_42gy-BNrw">
                   <a target="_blank" rel="noopener">
-                    Youtube
+                    YouTube
                   </a>
                 </Link>
               </li>
@@ -86,12 +84,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div
-            className={classNames(
-              style.footerLinkSection,
-              style.ministriesSection
-            )}
-          >
+          <div className={clsx(style.footerLinkSection, style.ministriesSection)}>
             <h1>Ministries</h1>
             <ul>
               <li>
@@ -104,9 +97,7 @@ export default function Footer() {
                 <Link href="/ministries/cafe/">Caf&eacute;</Link>
               </li>
               <li>
-                <Link href="/ministries/cleansingstream/">
-                  Cleansing Stream
-                </Link>
+                <Link href="/ministries/cleansingstream/">Cleansing Stream</Link>
               </li>
               <li>
                 <Link href="/ministries/doulos/">Doulos</Link>
@@ -121,13 +112,13 @@ export default function Footer() {
                 <Link href="/ministries/livingfree/">Living Free</Link>
               </li>
               <li>
-                <Link href="/ministries/men/">Men's Ministry</Link>
+                <Link href="/ministries/men/">Men&apos;s Ministry</Link>
               </li>
               <li>
                 <Link href="/ministries/sports/">Sports Fellowship</Link>
               </li>
               <li>
-                <Link href="/ministries/women/">Women's Ministry</Link>
+                <Link href="/ministries/women/">Women&apos;s Ministry</Link>
               </li>
             </ul>
           </div>
@@ -142,9 +133,7 @@ export default function Footer() {
                 <Link href="/missions/missionstrips/">Our Missions Trips</Link>
               </li>
               <li>
-                <Link href="/missions/visionformissions/">
-                  Our Vision For Missions
-                </Link>
+                <Link href="/missions/visionformissions/">Our Vision For Missions</Link>
               </li>
             </ul>
           </div>

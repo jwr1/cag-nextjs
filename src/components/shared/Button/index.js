@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Link from 'next/link';
 
 import style from './style.module.scss';
@@ -11,7 +11,7 @@ export default function Button({
   white,
   ...props
 }) {
-  const classes = classNames(style.button, {
+  const classes = clsx(style.button, {
     [style.buttonSmall]: small,
     [style.buttonWhite]: white,
     [className]: className,

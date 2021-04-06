@@ -2,6 +2,7 @@ import style from './style.module.scss';
 
 import Button from '../../shared/Button';
 import DownButton from '../DownButton';
+import { ArrowIcon } from '../../icons';
 
 export default function VideoBanner() {
   return (
@@ -40,7 +41,7 @@ export default function VideoBanner() {
       {/* NOTIFICATION CODE */}
       <div className={style.alert}>
         <a href="#">Something</a>
-        <img src="/static/icons/arrow_white.png" />
+        <ArrowIcon />
       </div>
     </div>
   );

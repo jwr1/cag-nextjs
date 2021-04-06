@@ -1,20 +1,33 @@
-import { useState } from 'react';
-import classNames from 'classnames';
+import { useState, useEffect } from 'react';
+import clsx from 'clsx';
 import PlayIcon from './PlayIcon';
 import style from './style.module.scss';
 
 export default function YouTubeEmbed({ className, id, isPlaylist, title }) {
   const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [playlistThumbnail, setPlaylistThumbnail] = useState('');
+
+  const videoUrl = isPlaylist
+    ? `https://www.youtube.com/embed/videoseries?list=${id}&autoplay=1`
+    : `https://www.youtube.com/embed/${id}/?autoplay=1`;
+
+  useEffect(() => {
+    if (isPlaylist) {
+      fetch(
+        `https://www.youtube.com/oembed?url=${encodeURIComponent(videoUrl)}`
+      )
+        .then((v) => v.json())
+        .then((v) => setPlaylistThumbnail(v.thumbnail_url));
+    } else {
+      if (playlistThumbnail) setPlaylistThumbnail('');
+    }
+  }, [id, isPlaylist]);
 
   return (
-    <div className={classNames(style.YouTubeEmbed, className)}>
+    <div className={clsx(style.YouTubeEmbed, className)}>
       {iframeLoaded ? (
         <iframe
-          src={
-            isPlaylist
-              ? `https://www.youtube.com/embed?listType=playlist&list=${id}&autoplay=1`
-              : `https://www.youtube.com/embed/${id}/?autoplay=1`
-          }
+          src={videoUrl}
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -27,13 +40,11 @@ export default function YouTubeEmbed({ className, id, isPlaylist, title }) {
           aria-label={title}
         >
           <div
-            style={
-              isPlaylist
-                ? undefined
-                : {
-                    backgroundImage: `url(https://i1.ytimg.com/vi/${id}/hqdefault.jpg)`,
-                  }
-            }
+            style={{
+              backgroundImage: isPlaylist
+                ? `url(${playlistThumbnail})`
+                : `url(https://i1.ytimg.com/vi/${id}/hqdefault.jpg)`,
+            }}
           />
           <PlayIcon />
         </button>

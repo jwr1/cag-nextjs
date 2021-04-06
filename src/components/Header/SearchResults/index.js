@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import useEventListener from '@use-it/event-listener';
 import Link from 'next/link';
 
@@ -30,8 +30,8 @@ export default function SearchResults({ searchInput }) {
           .firestore()
           .collection('website-search')
           .get()
-          .then(querySnapshot =>
-            setSearchItems(querySnapshot.docs.map(doc => doc.data()))
+          .then((querySnapshot) =>
+            setSearchItems(querySnapshot.docs.map((doc) => doc.data()))
           );
     },
     searchInput
@@ -66,13 +66,13 @@ export default function SearchResults({ searchInput }) {
 
   return (
     <div
-      className={classNames(style.siteSearchResult, {
+      className={clsx(style.siteSearchResult, {
         [style.siteSearchResultVisible]:
           resultsVisible && searchQuery.length > 0,
       })}
     >
       <ul>
-        {searchQueryResults.map(v => (
+        {searchQueryResults.map((v) => (
           <li key={v.title}>
             <Link href={v.action}>
               <a>

@@ -19,13 +19,14 @@ import '@fontsource/ibm-plex-serif/latin-400.css';
 import '@fontsource/ibm-plex-serif/latin-400-italic.css';
 import '@fontsource/source-sans-pro/latin-400.css';
 import '@fontsource/source-sans-pro/latin-700.css';
+
 import '../styles/global.scss';
 
 import ContextsProvider from '../contexts';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-function MyApp({ Component, pageProps }) {
+export default function CustomApp({ Component, pageProps }) {
   // Global site tag (gtag.js) - Google Analytics
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
@@ -91,5 +92,3 @@ function MyApp({ Component, pageProps }) {
     </ContextsProvider>
   );
 }
-
-export default MyApp;

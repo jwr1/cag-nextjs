@@ -1,18 +1,19 @@
-import { useContext, useState, useRef } from "react";
-import classNames from "classnames";
-import Link from "next/link";
-import Image from "next/image";
+import { useContext, useState, useRef } from 'react';
+import clsx from 'clsx';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import headerThemeContext from "../../contexts/headerTheme";
-import style from "./style.module.scss";
+import headerThemeContext from '../../contexts/headerTheme';
+import style from './style.module.scss';
 
-import SearchResults from "./SearchResults";
+import SearchResults from './SearchResults';
+import { CagLogoIcon, ExternalLinkIcon, SearchIcon } from '../icons';
 
 export default function Header() {
   const [headerTheme] = useContext(headerThemeContext);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
 
   const searchInputRef = useRef();
 
@@ -44,14 +45,8 @@ export default function Header() {
           <a target="_blank" rel="noopener">
             STORE
             <span className={style.externalLink}>
-              <Image
-                width="10px"
-                height="10px"
-                src={
-                  headerTheme === "light"
-                    ? "/static/icons/external_link_dark.png"
-                    : "/static/icons/external_link_light.png"
-                }
+              <ExternalLinkIcon
+                className={clsx(style.headerSvg, style.externalLink)}
               />
             </span>
           </a>
@@ -65,7 +60,7 @@ export default function Header() {
 
   let finalHeaderTheme;
   switch (headerTheme) {
-    case "transparent": {
+    case 'transparent': {
       if (mobileOpen) {
         finalHeaderTheme = style.headerDark;
       } else {
@@ -73,11 +68,11 @@ export default function Header() {
       }
       break;
     }
-    case "dark": {
+    case 'dark': {
       finalHeaderTheme = style.headerDark;
       break;
     }
-    case "light":
+    case 'light':
     default: {
       finalHeaderTheme = style.headerLight;
       break;
@@ -85,18 +80,13 @@ export default function Header() {
   }
 
   return (
-    <header className={classNames(style.header, finalHeaderTheme)}>
+    <header className={clsx(style.header, finalHeaderTheme)}>
       <main className={style.headerContent}>
         <Link href="/">
           <a className={style.headerIcon}>
             <span className={style.headerIconInner}>
-              <Image
-                src={
-                  headerTheme === "light"
-                    ? "/static/icons/cag-logo-left.png"
-                    : "/static/icons/cag-logo-white.png"
-                }
-                alt="Home Page"
+              <CagLogoIcon
+                className={style.headerSvg}
                 width="180.5px"
                 height="13px"
               />
@@ -114,21 +104,14 @@ export default function Header() {
             onChange={(e) => setSearchValue(e.target.value)}
             ref={searchInputRef}
           />
-          <span className={style.searchButton}>
-            <Image
-              src={
-                headerTheme === "light"
-                  ? "/static/icons/search-dark.png"
-                  : "/static/icons/search-white.png"
-              }
-              alt="Search CAG.org"
-              width="20px"
-              height="20px"
-            />
-          </span>
+          <SearchIcon
+            className={clsx(style.headerSvg, style.searchButton)}
+            width="20px"
+            height="20px"
+          />
         </label>
         <nav
-          className={classNames(style.mobileNavButton, {
+          className={clsx(style.mobileNavButton, {
             [style.mobileNavButtonIn]: mobileOpen,
           })}
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -142,7 +125,7 @@ export default function Header() {
 
       {/* Outside of the flex style */}
       <nav
-        className={classNames(style.mobileNav, {
+        className={clsx(style.mobileNav, {
           [style.mobileNavIn]: mobileOpen,
         })}
       >
