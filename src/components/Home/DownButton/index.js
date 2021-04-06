@@ -6,7 +6,7 @@ export default function DownButton({ alt, href }) {
   return (
     <Link {...{ href }}>
       <a className={style.downButton}>
-        <ArrowDownIcon width="50" height="50" {...{ alt }} />
+        <ArrowDownIcon {...{ alt }} />
       </a>
     </Link>
   );
